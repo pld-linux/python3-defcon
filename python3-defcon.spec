@@ -15,7 +15,7 @@ Source0:	https://files.pythonhosted.org/packages/source/d/defcon/defcon-%{versio
 # Source0-md5:	7d725879cb9529b04e7f212d56b8f731
 URL:		https://pypi.org/project/defcon/
 BuildRequires:	python3-modules >= 1:3.6
-BuildRequires:	python3-setuptools >= 42
+BuildRequires:	python3-setuptools >= 1:42
 BuildRequires:	python3-setuptools_scm
 %if %{with tests}
 BuildRequires:	python3-fonttools >= 4.10.0
