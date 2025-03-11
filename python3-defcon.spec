@@ -7,7 +7,7 @@ Summary:	Set of flexible objects for representing UFO data
 Summary(pl.UTF-8):	Zbiór elastycznych obiektów reprezentujących dane UFO
 Name:		python3-defcon
 Version:	0.9.0
-Release:	4
+Release:	5
 License:	MIT
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/defcon/
