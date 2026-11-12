@@ -6,29 +6,30 @@
 Summary:	Set of flexible objects for representing UFO data
 Summary(pl.UTF-8):	Zbiór elastycznych obiektów reprezentujących dane UFO
 Name:		python3-defcon
-Version:	0.9.0
-Release:	5
+Version:	0.12.2
+Release:	1
 License:	MIT
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/defcon/
-Source0:	https://files.pythonhosted.org/packages/source/d/defcon/defcon-%{version}.zip
-# Source0-md5:	7d725879cb9529b04e7f212d56b8f731
+Source0:	https://files.pythonhosted.org/packages/source/d/defcon/defcon-%{version}.tar.gz
+# Source0-md5:	fd95e02825b31b648510e201d9cdeef2
 URL:		https://pypi.org/project/defcon/
-BuildRequires:	python3-modules >= 1:3.6
+BuildRequires:	python3-modules >= 1:3.9
 BuildRequires:	python3-setuptools >= 1:42
 BuildRequires:	python3-setuptools_scm
+%if %{with tests} || %{with doc}
+BuildRequires:	python3-fonttools >= 4.59.0
+%endif
 %if %{with tests}
-BuildRequires:	python3-fonttools >= 4.10.0
-BuildRequires:	python3-fs >= 2.2.0
 BuildRequires:	python3-pytest >= 3.0.3
 %endif
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
 %if %{with doc}
+BuildRequires:	python3-sphinx_rtd_theme
 BuildRequires:	sphinx-pdg-3
 %endif
-BuildRequires:	unzip
-Requires:	python3-modules >= 1:3.6
+Requires:	python3-modules >= 1:3.9
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
